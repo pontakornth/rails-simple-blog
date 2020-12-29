@@ -1,12 +1,9 @@
+<div class="container m-auto p-6">
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+<h1 class="text-2xl font-bold"><%= @article.title %></h1>
 
-<p>
-  <strong>Body:</strong>
+<p class="content py-4">
   <%= @article.body %>
 </p>
 
@@ -14,8 +11,8 @@
   <strong>Score:</strong>
   <%= @article.score %>
 </p>
-
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Upvote', upvote_article_path(@article), method: :post  %> |
 <%= link_to 'Downvote', downvote_article_path(@article), method: :post %> |
 <%= link_to 'Back', articles_path %>
+</div>
