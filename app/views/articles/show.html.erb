@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @article.body %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @article.score %>
+</p>
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Upvote', upvote_article_path(@article), method: :post  %> |
+<%= link_to 'Downvote', downvote_article_path(@article), method: :post %> |
+<%= link_to 'Back', articles_path %>
